@@ -1,0 +1,328 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Nunito:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f5f7fa;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-family: 'Lora', serif;
+  color: #2d3748;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4e8cff;
+}
+
+/* Header */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4e8cff;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #4e8cff;
+  border-bottom: 2px solid #4e8cff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #2d3748;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-image img {
+  max-width: 180px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 5px solid #4e8cff;
+}
+
+.profile-info h2 {
+  color: #4e8cff;
+  margin: 0.5rem 0;
+}
+
+.role {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* For vertical centering if inside a flex container */
+  text-align: center;
+  padding: 40px 20px;
+  margin: auto;
+  max-width: 800px;
+}
+
+/* Optional: to vertically center in viewport */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the resume button */
+.resume-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #1e3ac7;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #2747e5;
+}
+
+.view-more {
+  padding: 0.8rem 2rem;
+  background: #4e8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-more:hover {
+  background: #81b9e7;
+}
+
+/* About Section */
+.about ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about li {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+}
+
+/* Projects */
+.project-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 5px solid #4e8cff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-bottom: 0.8rem;
+  color: #4e8cff;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #e6f0ff;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-section h2 {
+  font-size: 2.2rem;
+  color: #4e8cff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4e8cff;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-link .icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.contact-link:hover {
+  background-color: #b2b238d3;
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .contact-link {
+    font-size: 1.2rem;
+    padding: 18px 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .profile {
+    flex-direction: column;
+  }
+}
